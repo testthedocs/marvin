@@ -17,3 +17,4 @@ help: ## This help message
 .PHONY: create-rakpart-check
 create-rakpart-check: ## Creates boilerplate for a new rakpart check
 	@echo "$(YELLOW)==> Creating boilerplate for new check ...$(RESET)"
+	@cookiecutter -o data /srv/cookiecutters/cookiecutter-rakpart/

@@ -6,9 +6,13 @@ LABEL maintainer "Sven <sven@testthedocs.org>" \
 # Copy scripts, etc
 COPY dockerfiles/Makefile /srv/Makefile
 COPY dockerfiles/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY cookiecutters /srv/cookiecutters
+
+# Volume
+VOLUME ["/srv/data"]
 
 # Run commands
-RUN adduser -s /bin/false -D -H ttd \
+RUN adduser -s /bin/false -D ttd \
     && apk --no-cache add \
     make \
     su-exec \
