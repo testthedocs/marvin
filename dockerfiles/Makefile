@@ -14,7 +14,12 @@ YELLOW=`tput setaf 3`
 help: ## This help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: create-rakpart-check
-create-rakpart-check: ## Creates boilerplate for a new rakpart check
-	@echo "$(YELLOW)==> Creating boilerplate for new check ...$(RESET)"
+.PHONY: rakpart-check
+rakpart-check: ## Creates boilerplate for a Rakpart check
+	@echo "$(YELLOW)==> Creating boilerplate for new Rakpart check ...$(RESET)"
 	@cookiecutter -o data /srv/cookiecutters/cookiecutter-rakpart/
+
+.PHONY: plone-training
+plone-training: ## Creates boilerplate for a Plone training (docs)
+	@echo "$(YELLOW)==> Creating boilerplate for new Plone training ...$(RESET)"
+	@cookiecutter -o data /srv/cookiecutters/cookiecutter-plone-training/

@@ -12,8 +12,12 @@ COPY cookiecutters /srv/cookiecutters
 VOLUME ["/srv/data"]
 
 # Run commands
-RUN adduser -s /bin/false -D ttd \
+RUN builddeps=' \
+    git \
+    ' \
+    && adduser -s /bin/false -D ttd \
     && apk --no-cache add \
+    $builddeps \
     make \
     su-exec \
     tini \
@@ -21,7 +25,9 @@ RUN adduser -s /bin/false -D ttd \
     ncurses \
     && pip3 install --no-cache-dir --upgrade pip \
     && pip3 install --no-cache-dir --upgrade setuptools \
-    && pip3 install --no-cache-dir cookiecutter
+    && pip3 install --no-cache-dir cookiecutter \
+    && git clone https://github.com/testthedocs/cookiecutter-plone-training /srv/cookiecutters/cookiecutter-plone-training \
+    && apk del --purge $builddeps
 
 WORKDIR /srv
 
