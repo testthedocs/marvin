@@ -1,6 +1,6 @@
 {
     "project_name": "Name for title in the docs",
-    "docker_image": "Name for docker container ans usage docs",
+    "docker_image": "Name for docker container and docs",
     "short_description": "A short description which will be used in the README",
     "version_nr" : "0.0.1",
     "github_username": "svx",
