@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.4
+=====
+
+- Add "make repo" [svx]
+
 0.0.3
 =====
 

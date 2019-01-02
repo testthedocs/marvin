@@ -18,3 +18,8 @@ help: ## This help message
 create-rakpart-check: ## Creates boilerplate for a new rakpart check
 	@echo "$(YELLOW)==> Creating boilerplate for new check ...$(RESET)"
 	@cookiecutter -o data /srv/cookiecutters/cookiecutter-rakpart/
+
+.PHONY: repo
+repo: ## Copies default PR, Issue and Feature templates for GitHub into place
+	@echo "$(YELLOW)==> Moving GitHub templates into place...$(RESET)"
+	@cp -r /srv/templates/repo/.github data

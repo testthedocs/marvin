@@ -7,6 +7,7 @@ LABEL maintainer "Sven <sven@testthedocs.org>" \
 COPY dockerfiles/Makefile /srv/Makefile
 COPY dockerfiles/entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY cookiecutters /srv/cookiecutters
+COPY templates /srv/templates
 
 # Volume
 VOLUME ["/srv/data"]
