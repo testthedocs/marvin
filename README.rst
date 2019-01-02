@@ -37,13 +37,13 @@ Run the following command to create the base setup for a new `Rakpart <https://r
 
 .. code-block:: shell
 
-   docker run -it -v `pwd`:/srv/data testthedocs/marvin create-rakpart-check
+   docker run -it --rm -v `pwd`:/srv/data testthedocs/marvin create-rakpart-check
 
 Run the following command to copy GitHub Issue, Feature and PR templates into place.
 
 .. code-block:: shell
 
-   docker run -it -v `pwd`:/srv/data testthedocs/marvin repo
+   docker run -it --rm -v `pwd`:/srv/data testthedocs/marvin repo
 
 Contribute
 ==========
