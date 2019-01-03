@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.5
+=====
+
+- Add GitHub tagging of release to Makefile
+
 0.0.4
 =====
 
