@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.6
+=====
+
+- Fix Makefile template, to make it work for Rakpart [svx]
+
 0.0.5
 =====
 
