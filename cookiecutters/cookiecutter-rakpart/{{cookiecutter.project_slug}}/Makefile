@@ -42,6 +42,6 @@ check_release_version:
 
 .PHONY: tag_github
 tag_github: ## Tags the commit on GitHub with version nr.
-	@git tag -a $(VERSION) -m "[release] $(VERSION) of $(NAME)" || true
-	@git push origin $(VERSION)
+	@git tag -a $(NAME)-$(VERSION) -m "[release] $(VERSION) of $(NAME)" || true
+	@git push origin $(NAME)-$(VERSION)
 
