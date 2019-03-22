@@ -1,0 +1,12 @@
+---
+extends: spelling
+message: "Did you really mean '%s'?"
+level: error
+custom: true
+ignore:
+  - pronovix/tech-terms/security.txt
+  - pronovix/tech-terms/blockchain.txt
+  - pronovix/tech-terms/devops.txt
+  - pronovix/tech-terms/general.txt
+  - pronovix/tech-terms/techwriting.txt
+  - pronovix/tech-terms/mobile.txt

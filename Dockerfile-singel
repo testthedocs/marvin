@@ -1,0 +1,32 @@
+# Make this is Multistage build
+# Use builder for downloading with curl
+# And extracting, by doing so we do not need curl and do
+# not need to delete other files, since we just copy over
+
+
+FROM alpine:3.9
+
+
+ENV BOILR_VERSION 0.4.5
+
+# Add Maintainer Info
+LABEL maintainer="Sven <sven@testthedocs.org>"
+
+RUN adduser -s /bin/false -D -H ttd \
+        && apk add --no-cache \
+	    bash
+
+RUN set -x \
+	&& apk add --no-cache --virtual .build-deps \
+		curl \
+	&& curl -SL https://github.com/Ilyes512/boilr/releases/download/${BOILR_VERSION}/boilr_${BOILR_VERSION}_Linux_64-bit.tar.gz \
+	| tar xvz -C /usr/local/bin \
+        && rm /usr/local/bin/LICENSE \
+        && rm /usr/local/bin/README.md \
+	&& apk del .build-deps
+
+# Run the executable
+CMD ["boilr"]
+
+# https://github.com/Ilyes512/boilr/releases/download/0.4.5/boilr_0.4.5_Linux_64-bit.tar.gz
+
