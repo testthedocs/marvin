@@ -1,0 +1,22 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  homebrew:
+    desc: "Check if Homebrew is installed"
+    silent: true
+    preconditions:
+      - sh: "command -v brew >> /dev/null"
+        msg: "Please install Homebrew"
+
+  ripgrep:
+    desc: "Check if ripgrep is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+    - echo installing bla
+    status:
+    - command -v rg >> /dev/null
+
+

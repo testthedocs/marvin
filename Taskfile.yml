@@ -1,0 +1,15 @@
+# https://taskfile.dev
+
+version: '3'
+
+silent: true
+
+includes:
+  setup: tasks/Taskfile.setup.yml
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - echo "Documentation Tool Kit"
+      - task -l

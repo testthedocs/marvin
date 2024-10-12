@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "cmds",
+        "Taskfile"
+    ],
+    "yaml.schemas": {
+        "https://taskfile.dev/schema.json": "file:///Users/svx/Projects/ttd/marvin/tasks/Taskfile.setup.yml"
+    }
+}
