@@ -2,10 +2,13 @@
 
 version: '3'
 
+silent: true
+
 tasks:
   homebrew:
     desc: "Check if Homebrew is installed"
     silent: true
+    internal: true
     preconditions:
       - sh: "command -v brew >> /dev/null"
         msg: "Please install Homebrew"
