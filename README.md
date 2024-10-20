@@ -22,4 +22,5 @@ task
 - https://taskfile.dev/
 - https://taskfile.dev/usage/#forwarding-cli-arguments-to-commands
 - https://taskfile.dev/usage/#display-summary-of-task
+- https://taskfile.dev/usage/#running-a-taskfile-from-a-subdirectory
 - https://rnemet.dev/posts/tools/taskfile/
