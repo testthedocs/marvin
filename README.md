@@ -2,7 +2,19 @@
 
 > Status: POC - WIP
 
-Documentation Tool Kit
+Documentation Tool Kit.
+
+---
+
+## Requirements
+
+- [Taskfile](https://taskfile.dev/)
+
+## Usage
+
+```console
+task
+```
 
 ## Resources
 
