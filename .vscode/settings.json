@@ -1,10 +1,14 @@
 {
     "cSpell.words": [
         "cmds",
+        "ripgrep",
         "Taskfile"
     ],
     "yaml.schemas": {
-        "https://taskfile.dev/schema.json": "file:///Users/svx/Projects/ttd/marvin/tasks/Taskfile.setup.yml"
+        "https://taskfile.dev/schema.json": [
+            "file:///Users/svx/Projects/ttd/marvin/tasks/Taskfile.setup.yml",
+            "file:///Users/sstrack/Projects/ttd/marvin/tasks/Taskfile.setup.yml"
+        ]
     },
     "conventionalCommits.scopes": [
         "setup"
