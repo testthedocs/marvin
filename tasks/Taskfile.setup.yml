@@ -19,4 +19,20 @@ tasks:
     status:
     - command -v rg >> /dev/null
 
+  lychee:
+    desc: "Check if lychee is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+    - echo installing lychee
+    status:
+    - command -v lychee >> /dev/null
 
+  vale:
+    desc: "Check if vale is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+    - echo installing vale
+    status:
+    - command -v vale >> /dev/null
