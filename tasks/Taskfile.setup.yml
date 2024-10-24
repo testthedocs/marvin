@@ -39,3 +39,12 @@ tasks:
     - echo installing vale
     status:
     - command -v vale >> /dev/null
+
+  fd:
+    desc: "Check if fd is installed and install it if missing"
+    deps:
+      - homebrew
+    cmds:
+    - echo installing fd
+    status:
+    - command -v fd >> /dev/null
